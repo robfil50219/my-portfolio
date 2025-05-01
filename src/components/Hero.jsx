@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import profilePic from '../assets/profile.jpg'; // or '/images/profile.jpg' if using public/
+import profilePic from '../assets/profile.jpg';
 
 export default function Hero() {
     const [zoomed, setZoomed] = useState(false);
@@ -8,7 +8,7 @@ export default function Hero() {
         <>
             <section className="bg-teal-600 text-white py-20">
                 <div className="container mx-auto px-6 text-center">
-                    {/* Profile picture with border, zoom, and shadow-on-hover */}
+                    {/* Profile picture with B&W filter + color-on-hover + zoom/lightbox */}
                     <img
                         src={profilePic}
                         alt="Robert Filep"
@@ -16,7 +16,8 @@ export default function Hero() {
               w-32 h-32 rounded-full mx-auto mb-4 object-cover
               border-4 border-white
               cursor-pointer
-              transition-transform transition-shadow duration-300
+              filter grayscale hover:grayscale-0       /* B&W → color on hover */
+              transition-transform transition-filter duration-300
               hover:scale-105 hover:shadow-xl
             "
                         onClick={() => setZoomed(true)}
