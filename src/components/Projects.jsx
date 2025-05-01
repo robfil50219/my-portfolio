@@ -13,13 +13,13 @@ const projects = [
         title: 'Holidaze',
         description: 'Holidaze is a modern accommodation booking platform where users can search and book venues, while managers can manage listings.',
         image: '/images/Holidaze.png',
-        link: 'holidaze-robert-filep.netlify.app',
+        link: 'https://holidaze-robert-filep.netlify.app',
     },
     {
         title: 'ShopSphere',
         description: 'ShopSphere is an e-commerce platform built using React, offering product listings, a cart, checkout, and product search features.',
         image: '/images/ShopSphere.png',
-        link: 'shopspherenow.netlify.app',
+        link: 'https://shopspherenow.netlify.app',
     },
 ];
 
