@@ -5,19 +5,19 @@ import ProjectCard from './ProjectCard';
 const projects = [
     {
         title: 'Auctionary',
-        description: 'Real-time bidding platform built with React and WebSockets.',
+        description: 'Auctionary - Bid Smart, Win Big. Auctionary is a user-friendly auction platform with a dynamic carousel of featured items, comprehensive search, and user listings.',
         image: '/images/Auctionary.png',
         link: 'https://auctionarygo.netlify.app/',
     },
     {
         title: 'Holidaze',
-        description: 'Accommodation booking site integrating Noroff API.',
+        description: 'Holidaze is a modern accommodation booking platform where users can search and book venues, while managers can manage listings.',
         image: '/images/Holidaze.png',
         link: 'holidaze-robert-filep.netlify.app',
     },
     {
         title: 'ShopSphere',
-        description: 'Modern e-commerce store built with React and Tailwind.',
+        description: 'ShopSphere is an e-commerce platform built using React, offering product listings, a cart, checkout, and product search features.',
         image: '/images/ShopSphere.png',
         link: 'shopspherenow.netlify.app',
     },
