@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
-// Update these with your actual project details
+
 const projects = [
     {
         title: 'Auctionary',
