@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
-import profilePic from '../assets/profile.jpg'; // or '/images/profile.jpg' if using public/
+import profilePic from '../assets/profile.jpg';
 
 export default function Hero() {
     const [zoomed, setZoomed] = useState(false);
 
     return (
         <>
-            <section className="bg-teal-600 text-white py-20">
-                <div className="container mx-auto px-6 text-center">
-                    {/* Profile picture with border, zoom, and shadow-on-hover */}
+            {/* Hero with gradient background */}
+            <section className="relative bg-gradient-to-r from-teal-500 to-teal-700 text-white py-20 overflow-hidden">
+                <div className="relative container mx-auto px-6 text-center">
+                    {/* Profile picture */}
                     <img
                         src={profilePic}
                         alt="Robert Filep"
                         className="
               w-32 h-32 rounded-full mx-auto mb-4 object-cover
-              border-4 border-white
-              cursor-pointer
+              border-4 border-white cursor-pointer
               transition-transform transition-shadow duration-300
               hover:scale-105 hover:shadow-xl
             "
                         onClick={() => setZoomed(true)}
                     />
                     <h2 className="text-4xl font-bold mb-4">Hi, I’m Robert</h2>
-                    <p className="text-xl mb-8">Front-End Developer</p>
+                    <p className="text-xl mb-8">Front-End Developer & Designer</p>
                 </div>
             </section>
 
