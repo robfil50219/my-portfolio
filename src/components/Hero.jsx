@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import profilePic from '../assets/profile.jpg';
 
-export default function Hero() {
+export default function Hero({ aboutOpen, toggleAbout }) {
     const [zoomed, setZoomed] = useState(false);
 
     return (
         <>
-            {/* Hero with gradient background */}
             <section className="relative bg-gradient-to-r from-teal-500 to-teal-700 text-white py-20 overflow-hidden">
-                <div className="relative container mx-auto px-6 text-center">
-                    {/* Profile picture */}
+                <div className="container mx-auto px-6 text-center">
                     <img
                         src={profilePic}
                         alt="Robert Filep"
@@ -22,11 +20,24 @@ export default function Hero() {
                         onClick={() => setZoomed(true)}
                     />
                     <h2 className="text-4xl font-bold mb-4">Hi, I’m Robert</h2>
-                    <p className="text-xl mb-8">Front-End Developer & Designer</p>
+                    <p className="text-xl mb-4">Front-End Developer & Designer</p>
+
+                    <button
+                        onClick={toggleAbout}
+                        className="
+              mt-2 px-4 py-2
+              bg-white/20 hover:bg-white/30
+              text-white text-sm
+              rounded-md
+              shadow-md hover:shadow-lg
+              transition
+            "
+                    >
+                        About Me {aboutOpen ? '▲' : '▼'}
+                    </button>
                 </div>
             </section>
 
-            {/* Lightbox overlay */}
             {zoomed && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
