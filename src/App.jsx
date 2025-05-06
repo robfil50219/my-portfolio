@@ -17,10 +17,8 @@ export default function App() {
           aboutOpen={aboutOpen}
           toggleAbout={() => setAboutOpen(o => !o)}
         />
-
-        {/* About is only in the tree when aboutOpen is true */}
-        {aboutOpen && <About />}
-
+        {/* Always rendered, but hidden/collapsed when open=false */}
+        <About open={aboutOpen} />
         <Projects />
         <Contact />
       </main>
