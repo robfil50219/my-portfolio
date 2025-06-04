@@ -8,19 +8,18 @@ export default function Hero({ aboutOpen, toggleAbout }) {
         <>
             <section className="relative bg-gradient-to-r from-teal-500 to-teal-700 text-white py-20 overflow-hidden">
                 <div className="container mx-auto px-6 text-center">
+                    {/* Profilbilde som kan klikkes for å zoome */}
                     <img
                         src={profilePic}
+                        srcSet={`${profilePic} 1x, ${profilePic} 2x`}
                         alt="Robert Filep"
-                        className="
-              w-32 h-32 rounded-full mx-auto mb-4 object-cover
-              border-4 border-white cursor-pointer
-              transition-transform transition-shadow duration-300
-              hover:scale-105 hover:shadow-xl
-            "
+                        className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white cursor-pointer transition-transform transition-shadow duration-300 hover:scale-105 hover:shadow-xl"
                         onClick={() => setZoomed(true)}
                     />
+
+
                     <h2 className="text-4xl font-bold mb-4">Hi, I’m Robert</h2>
-                    <p className="text-xl mb-4">Front-End Developer & Designer</p>
+                    <p className="text-xl mb-4">Front-End Developer &amp; Designer</p>
 
                     <button
                         onClick={toggleAbout}
@@ -38,6 +37,7 @@ export default function Hero({ aboutOpen, toggleAbout }) {
                 </div>
             </section>
 
+            {/* Fullskjerms‐modal når bildet er "zoomed" */}
             {zoomed && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
